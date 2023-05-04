@@ -5,7 +5,7 @@ $options = array(
 );
 $list_user = get_all('danhsach', $options);
 echo header("refresh: 10");
-
+//
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
