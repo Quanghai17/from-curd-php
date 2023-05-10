@@ -23,30 +23,28 @@ $list_user = get_all('danhsach', $options);
     <div class="container">
         <h2>Danh sách</h2>
         <br>
-        <a href="add.php" class="btn btn-primary">Thêm mới </a>
+        <a href="edit.php" class="btn btn-primary">Thêm mới </a>
         <br>
         <table class="table">
             <thead>
-
                 <tr>
-                    <th scope="col">stt</th>
+                    <th scope="col-6">stt</th>
                     <th scope="col">Tên</th>
                     <th scope="col">Lớp</th>
                     <th scope="col">Câu hỏi</th>
                     <th>Thao tác</th>
                 </tr>
-
             </thead>
             <tbody>
                 <?php foreach ($list_user as $user) : ?>
                     <tr>
-                        <th scope="row"><?php echo $user['id'] ?></th>
+                        <th scope="row"><?php echo $user['name'] ?></th>
                         <td style="color: red; font-weight: bold;"><?= $user['ds_name'] ?></td>
                         <td><?= $user['ds_address'] ?></td>
                         <td><?= $user['ds_desc'] ?></td>
                         <td>
-                            <a href="edit.php?user_id=<?php echo $user['id']; ?>">Sửa</a> |
-                            <a onclick="return confirm('Are you sure to delete?')" href="delete.php?user_id=<?php echo $user['id']; ?>">Xóa </a>
+                            <a href="delete.php?user_id=<?php echo $user['id']; ?>">Sửa</a> |
+                            <a onclick="return confirm('Are you sure to delete?')" href="delete.php?user_id=<?php echo $user['name']; ?>">Xóa </a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
