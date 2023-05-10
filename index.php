@@ -68,7 +68,7 @@ echo header("refresh: 10");
     <div class="shop-area pt-110 pb-100 bg-gray mb-95 shop-full-width">
         <div class="ht-product-shop tab-content" style="margin-left: 400px; margin-top:80px; margin-right:20px;">
             <div class="tab-pane active show fade scroll-bar" id="list" role="tabpanel">
-                <?php foreach {$list_user as $user} : ?>
+                <?php foreach ($list_user as $user) : ?>
                     <div class="single-product-item">
                         <div class="row">
                             <div class="col-md-2">
