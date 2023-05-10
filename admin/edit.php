@@ -24,7 +24,7 @@ $user_info = get_a_record('danhsach', $user_id);
         <br>
         <h2>Edit user #<?= $user_id ?></h2>
         <form action="submit-edit.php" method="post">
-            <input type="hidden" name="id" value="<?= $user_info['id'] ?>">
+            <input type="hidden" name="id" value="<?= $user_info['name'] ?>">
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
@@ -35,16 +35,14 @@ $user_info = get_a_record('danhsach', $user_id);
                         <label for="exampleInputPassword1">Đơn vị</label>
                         <input required name="donvi" type="text" class="form-control" id="exampleInputPassword1" placeholder="Nhạp don vi" value="<?= $user_info['ds_address'] ?>">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="text" class="btn btn-primary">Submit</button>
                 </div>
                 <div class="col-md-6">
-                    <div class="form-group form-check">
+                    <div class="form-group mt-3 form-check">
                         <label class="form-check-label" for="exampleCheck1">Câu hỏi</label><br>
                         <textarea required name="desc" id="exampleCheck1" cols="70" rows="6"><?= $user_info['ds_desc'] ?></textarea>
-
                     </div>
                 </div>
-
         </form>
     </div>
 </body>
