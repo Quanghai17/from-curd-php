@@ -1,6 +1,6 @@
 <?php
 include('../lib/function.php');
-$user_id = intval($_GET['user_id']);
+$user_name = intval($_GET['user_name']);
 global $user_nav;
-ds_delete($user_id);
+ds_delete($user_name);
 header('location:list.php');
